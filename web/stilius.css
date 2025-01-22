@@ -1,0 +1,153 @@
+.BendriausiasKontaineris {
+	padding: 10px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+}
+
+.banner {
+	width: 100%;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url('background.jpg');
+
+}
+.bannerText {
+	width: 30%;
+	height: 50px;
+	
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+font.textas {
+	color: white;
+	font-size: 4;
+	text-align:center;
+	float: right;
+	width: 100%;
+	font-family: "Algerian";
+	
+}
+
+font.nuorodos {
+	color: white;
+	text-align:center;
+	float: right;
+	width: 100%;
+	
+	font-size: 1;
+	font-family: "Aharoni";
+	float:center;
+}
+
+.NuotraukuKontaineris {
+	width: 50%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+.n1 {
+	width: 50%;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nuotrauka {
+	height:85%; 
+	width:95%;
+}
+
+.NuotraukuTekstas{
+	color: black;
+	font-size: 1.1em;
+	text-align:center;
+	float: right;
+	width: 100%;
+	font-family: "Calibri";
+}
+
+.NuotraukuTekstasMazasis{
+	color:#D0D0D0;
+	
+	font-size: 0.75em;
+	text-align:center;
+	float: right;
+	width: 100%;
+	font-family: "Amasis MT Pro Light";
+}
+
+.informacijosKonteineris {
+	width: 50%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+.informacijosKonteinerioKaire {
+	width: 75%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.informacijosKonteinerioDesine {
+	width: 25%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.infoText {
+	color:gray;
+	text-align:left;
+	font-family: "Bookman Old Style";
+}
+
+.infoText2 {
+	color:black;
+	text-align:left;
+	font-family: "Bookman Old Style";
+}
+
+a:hover {
+	color:red;
+}
+
+.aKlase {
+	margin-right: 30px;
+	text-align:left;
+}
+
+.susisiekimas {
+	width: 48%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.Melyna {
+	color:blue;
+}
+
+.twitter {
+	height:25px;
+	width:30px;
+}
+
+.KurejuTekstas{
+	color:#D0D0D0;
+	
+	font-size: 0.75em;
+	text-align:left;
+	float: left;
+	width: 100%;
+	font-family: "Amasis MT Pro Light";
+}
