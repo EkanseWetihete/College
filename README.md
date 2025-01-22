@@ -1,2 +1,2 @@
 # College
-I am going to upload here whatever that i've made and still have in the first, second, third and fourth years that was meant to be for college tasks.
+I am going to upload a few projects that i've had to make in college. (There are a lot i am unable to get or upload so, these are just light weight ones)
