@@ -1,0 +1,55 @@
+body {
+    padding: 5px;
+    margin: 5px;
+}
+
+.aplinka {
+	background: #81DAF5;
+	
+    width: 1280px;
+	height: 600px;
+	position: relative;
+}
+
+.vanduo {
+	top: 400px;
+	background: #819FF7;
+    width: 100%;
+	height: 200px;
+	position: relative;
+	opacity: 0.6;
+}
+
+
+
+.zeme {
+	top: 250px;
+	left: 1080px;
+	background: green;
+    width: 200px;
+	height: 150px;
+	position: relative;
+}
+
+.raudonas {
+	background-image: url("fishSprite.png");
+    width: 50px;
+	height: 29px;
+	position: absolute;
+	top: 50px;
+}
+
+.tekstas {
+	top: 250px;
+	background: #0B615E;
+    width: 100%;
+	height: 35px;
+	opacity: 0;
+	position: relative;
+	
+}
+
+.patarle{
+	text-align: center;
+	color: black;
+}

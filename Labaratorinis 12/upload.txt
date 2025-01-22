@@ -1,0 +1,5 @@
+Julius Burdyginas 20 1 4 Ne
+Antanas Morka 50 35 5 Taip
+Vytautas Didysis 40 50 50 Ne
+Gediminas Pilis 980 999 5 Taip
+Maisto Papildas 24 54 3 Taip

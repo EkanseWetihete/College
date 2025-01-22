@@ -1,0 +1,44 @@
+* {
+    padding: 5px;
+    margin: 5px;
+}
+
+body{
+	background-color: #e9f2fd;
+}
+
+.red{
+	color:red;
+	padding: 0px;
+	margin: 0px;
+}
+
+.Select2{
+	width: 275px;
+}
+
+.irasymas {
+    width: 200px;
+}
+
+.irasymas2 {
+    width: 100px;
+}
+
+.borderis {
+	border: solid;
+	margin: 0px;
+	padding: 0px;
+}
+
+.prideti {
+	padding: 1px;
+}
+
+.vidurys {
+	text-align: center;
+}
+
+.rykiuoti {
+	border: none;
+}

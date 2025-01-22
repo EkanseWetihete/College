@@ -1,0 +1,23 @@
+* {
+    padding: 5px;
+    margin: 5px;
+}
+
+.irasymas {
+    width: 100px;
+}
+
+.borderis {
+	border: solid;
+	margin: 0px;
+	padding: 0px;
+}
+
+.red{
+	background-color: red;
+	!important;
+}
+
+.prideti {
+	padding: 1px;
+}

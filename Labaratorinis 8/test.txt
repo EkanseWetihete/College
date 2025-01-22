@@ -1,0 +1,46 @@
+function submitBtn(){
+
+    document.getElementById("Answer").innerHTML = "Paspausta, taciau neveikia";
+
+    //0-pirma komanda
+    komandos[0][0] = document.getElementById('teamName1');
+    komandos[0][1] = document.getElementById('teamPoints1');
+    komandos[0][2] = document.getElementById('teamWins1');
+
+    //1-antra komanda
+    komandos[1][0] = document.getElementById('teamName2');
+    komandos[1][1] = document.getElementById('teamPoints2');
+    komandos[1][2] = document.getElementById('teamWins2');
+
+    //2-trecia komanda
+    komandos[2][0] = document.getElementById('teamName3');
+    komandos[2][1] = document.getElementById('teamPoints3');
+    komandos[2][2] = document.getElementById('teamWins3');
+
+    //3-ketvirta komanda
+    komandos[3][0] = document.getElementById('teamName1');
+    komandos[3][1] = document.getElementById('teamPoints1');
+    komandos[3][2] = document.getElementById('teamWins3');
+
+    var posPoints = 4, posWins = 4;
+
+    for(var i=0; i < players; i++){
+        if(komandos[i][1] < minPoints){
+            minPoints = komandos[i][1];
+            posPoints = i;
+        }
+        if(komandos[i][2] < minWins){
+            minWins = komandos[i][2];
+            posWins = i;
+        }
+    }
+    if(posPoints !== 4 && posWins !== 4){
+    var atsakymas = "Mažiausiai taškų pelnė komanda " + komandos[posPoints][0] + ", kuri pelnė " +minPoints+ " taškų" +
+    ".<br>Paskutinę vietą gavo komanda " + komandos[posWins][0] + ", kuri laimėjo " +minWins+ " žaistų žaidimų";
+    }
+    else {
+        atsakymas = "Kažkas neveikia"
+    }
+    document.getElementById("Answer").appendChild = atsakymas;
+
+}

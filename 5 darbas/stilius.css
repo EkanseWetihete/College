@@ -1,0 +1,108 @@
+img{
+	max-width:100%;
+	max-height:100%;
+	
+}
+
+a{
+	text-decoration: none;
+	color: green;
+}
+
+.btn-success {
+	background-color: red; 
+}
+
+.btn-info {
+	background-color: yellow; 
+}
+
+.btn-warning {
+	background-color: orange; 
+}
+
+.btn-danger {
+	background-color: gray; 
+}
+
+
+
+.container{
+	width: 100%;
+	padding-right: 30px;
+	padding-left: 30px;
+	padding-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+.vidurys{
+	text-align: center;
+}
+
+
+
+.container-fluid{
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.nuotrauka{
+	background-size:100% 100%;
+	background-image:url(bread.png);
+	height: 300px;
+}
+
+.nopads{
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+
+
+.MidText{
+	padding-top:8px;
+	background-color:white;
+}
+
+.MidText2{
+	padding-top:8px;
+	background-color:black;
+}
+
+.zemiau{
+	padding-top:150px;
+}
+
+.TekstoSpalva{
+	color: white;
+}
+
+
+
+.melyna{
+	color: blue;
+}
+
+.mazasIcon{
+	width: 25px;
+	height: 20px;
+	
+}
+
+
+
+.pabaiga{
+	color: gray;
+	font-size: 0.8em;
+	opacity: 0.5;
+}
+
+.discordIcon{
+	height: 32px;
+	padding-top: 15px;
+}

@@ -1,0 +1,178 @@
+html{
+	cursor: url('pele.png'), auto;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	
+	background-color: #2E2C2A;
+}
+
+div{
+	width: 750px;
+	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img {
+	height:200px; 
+	width:95%;
+}
+
+a {
+	text-decoration: none;
+	color: #d4b49a;
+	padding: 3px;
+	transition: 0.3s;
+}
+
+a:hover {
+	color: white;
+	transition: 0.3s;
+	cursor: move;
+}
+
+
+
+.konteineris1{
+	width: 100%;
+	height: auto;
+	
+	background-color: white;
+}
+
+.konteineris1_Banner{
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	text-align: center;
+	
+	background-color: black;
+}
+
+font.bannerText {
+	font-size: 1.4em;
+	font-weight: 700;
+	font-family: "Montserrat";
+	color: white;
+}
+
+
+
+.konteineris2{
+	width: 100%;
+	height: 25px;
+	text-align: center;
+	
+	transform: translate(-2px, -1px);
+	background-color: gray;
+	opacity: 0.9;
+}
+
+.konteineris2_link{
+	height: 100%;
+	line-height: 25px;
+}
+
+.konteineris3_Svetaine{
+	height: 50px;
+	text-align: center;
+}
+
+a.svetaine2{
+	border: 1px solid #d4b49a;
+	border-color: #d4b49a;
+	font-size: 1.4em;
+	font-family: "Calibri";
+}
+
+a.svetaine2:hover{
+	background-image: url("space.jpg");
+}
+
+
+
+.NuotraukuVisasKonteineris {
+	text-align:center;
+	width: 600px;
+}
+
+.remelis{
+	border: 1px solid black;
+}
+
+font.NuotraukuHeader {
+	font-size: 1.2em;
+	font-weight: 700;
+	font-family: "Calibri";
+}
+
+.NuotraukuKontaineris {
+	width: 600px;
+	height: auto;
+	display: flex;
+	text-align: center;
+}
+
+.iliustracija1 {
+	width: 50%;
+	height: 95%;
+}
+
+a.iliustracija1_nuotrauka:hover{
+	opacity: 0.8;
+}
+
+
+
+font.InformacijaHeader{
+	font-size: 1.4em;
+	font-weight: 700;
+	font-family: "Amasis MT Pro Light";
+	color: orange;
+}
+
+.informacija{
+	display: flex;
+}
+
+.informacijaKaire{
+	width: 70%;
+}
+
+.informacijaDesine{
+	width: 30%;
+}
+
+a.informacija_desine_svetaine:hover{
+	background-color: orange;
+	opacity: 0.5
+}
+
+.galinisKonteineris{
+	display: flex;
+}
+
+.galiniaiKonteineriai{
+	width: 50%;
+}
+
+font.GalinisHead{
+	color: gray;
+	font-size: 1.2em;
+	font-weight: 700;
+	font-family: "Bookman Old Style";
+}
+
+font.GalinisText{
+	color: white;
+	font-family: "Cabin";
+	opacity: 0.7;
+}
+
+.SocialMediaIcon{
+	width: 30px;
+	height: 25px;
+}

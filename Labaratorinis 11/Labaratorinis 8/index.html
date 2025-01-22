@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>8 laboratorinis darbas</title>
+		<script src="main.js" defer></script>
+		<link href="main.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<h5> Užduotis: </h5> <font> Atliekant užduotį naudojami objekto tipo kintamieji. Duomenys įvedami formoje, išvedami į ekraną ir į tekstinį failą.</font> <br>
+		<h5> Pasirinkimas: </h5> <font> Duotas darbuotojų masyvas. Parodyti vardus ir pavardes darbuotojų, kurių darbo stažas didesnis negu 30 metų, bet dar nėra pensinio amžiaus.</font>
+		<div>
+			<div>
+				<label for="vardas">Vardas:</label>
+				<input placeholder="Vardas" class="irasymas" type="text" id="vardas" maxlength="30"> 
+				<label for="pavarde">Pavardė:</label>
+				<input placeholder="Pavardė" class="irasymas" type="text" id="pavarde" maxlength="50">
+				<label for="metai">Metai:</label>
+				<input placeholder="Metai" class="irasymas" type="text" id="metai" maxlength="3">
+				<label for="stazas">Darbo Stažas:</label>
+				<input placeholder="Darbo Stažas" class="irasymas" type="text" id="stazas" maxlength="3">
+				<button type="button" onclick="funkcija()">Pridėti</button> <br>
+				<font> Darbuotoju sarašas: </font>
+				<div id="Atsakymas">
+					
+				</div>
+				<font> Darbo stažas didesnis nei 30 metų, tačiau neturi pensininio amžiaus: </font>
+				<div id="darbas">
+					
+				</div>
+				<button type="button" onclick="saugojimas()">Išsaugoti sąraša</button> <br>
+			</div>
+		</div>
+	</body>
+</html>

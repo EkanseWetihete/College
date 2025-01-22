@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>10 laboratorinis darbas</title>
+		<script src="main.js" defer></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+		<link href="main.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<h5> Pasirinkimas: </h5> <font>
+		Sukurkite registracijos į konferenciją formą. (√) 
+		Kai kurie laukai privalomi, kai kurie ne. (√)
+		Yra laukų, kurie tampa privalomais priklausomai nuo atsakymų kituose laukuose. (√)
+		Duomenys išsaugomi csv faile. (√)
+		Duomenys pateikiami ekrane su galimybe rikiuoti ir filtruoti. (√)
+		Po paskutinio išsaugojimo suvesti duomenys parodomi kitokiu formatu. (√)
+		Pateikiama statistika apie užsiregistravusius asmenis. (√)
+		</font>
+		<div>
+			<div>
+				<h2> Registracija </h2>
+				<label for="vardas">Vardas<font class="red">*</font>:</label> 
+				<input placeholder="Vardas" class="irasymas" type="text" id="vardas" maxlength="30" required> <br>
+				
+				<label for="pavarde">Pavardė<font class="red">*</font>:</label> 
+				<input placeholder="Pavardė" class="irasymas" type="text" id="pavarde" maxlength="50" required> <br>
+				
+				<label for="metai"> Gimimo data<font class="red">*</font>: </label> 
+				<input placeholder="Metai" class="irasymas2" type="text" id="metai" maxlength="4" required>
+				<input placeholder="Mėnuo" class="irasymas2" type="text" id="menuo" maxlength="2" required>
+				<input placeholder="Diena" class="irasymas2" type="text" id="diena" maxlength="2" required> <br>
+				
+				<label> Lytis<font class="red">*</font>: </label>
+				<label for="vyras">Vyras: </label> <input type="checkbox" id="vyras" onchange="document.getElementById('moteris').checked = this.enabled;"/>
+				<label for="moteris">Moteris: </label> <input type="checkbox" id="moteris" onchange="document.getElementById('vyras').checked = this.enabled;"/>
+				<br>
+				
+				<label for="adresas">Adresas:</label>
+				<input placeholder="Adresas" class="irasymas" type="text" id="adresas" maxlength="10"> <br>
+				
+				<label for="studijuoja">Ar jūs Studijuojate? </label>
+				<input type="checkbox" id="studijuoja" onchange="document.getElementById('pasirinkimas').disabled = !this.checked;"/>
+				
+				<select class="form-select Select2" id="pasirinkimas" aria-label=".form-select-lg example" disabled>
+				  <option selected>Pasirinkite studijų krypti...</option>
+				  <option value="Antropologija">Antropologija</option>
+				  <option value="Aplinkotyra">Aplinkotyra</option>
+				  <option value="Archeologija">Archeologija</option>
+				  <option value="Chemija">Chemija</option>
+				  <option value="Ekologija">Ekologija</option>
+				  <option value="Ekonomija">Ekonomija</option>
+				  <option value="Fizika">Fizika</option>
+				  <option value="Informatika">Informatika</option>
+				  <option value="Matematika">Matematika</option>
+				  <option value="Medicina">Medicina</option>
+				  <option value="Sportas">Sportas</option>
+				  <option value="Kita">Kita</option>
+				</select> <br>
+				
+				<font class="prideti"></font>
+				<button type="button" onclick="funkcija()"> Registruotis </button> <br> <br>
+				<font> Vartotojai: </font>
+				
+				<div id="Atsakymas">
+					<div class="row borderis vidurys">
+						<div class="col-3 borderis">
+							Vardas
+						</div>
+						<div class="col-4 borderis">
+							Pavardė
+						</div>
+						<div class="col-1 borderis">
+							Lytis <button class="rykiuoti" type="button" onclick="rykiavimas_Lytis()"> ↕ </button>
+						</div>
+						<div class="col-1 borderis">
+							Studijuoja
+						</div>
+						<div class="col-3 borderis">
+							Kryptis
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" onclick="Filtruoti()"> Filtruoti pagal studijavima</button> <br> <br>
+			<button type="button" onclick="download()"> Išsaugoti informacija </button> <br> <br>
+			
+			<div>
+				<h4> Statistika: </h4>
+				<div id="Statistika">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

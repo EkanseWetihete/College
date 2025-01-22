@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+		<link href="main.css" rel="stylesheet" />
+		<title>16 laboratorinis darbas</title>
+	</head>
+	<body>
+	<button onclick="move()"> Pradėti </button>
+		<div class="aplinka">
+			<div class="vanduo">
+				<div id="red" class="raudonas">
+				</div>
+			</div>
+			<div id="zeme" class="zeme">
+				
+			</div>
+			<div id="patarle" class="tekstas">
+				<div class="patarle">
+					<h3 class="patarle"> Dėl vienos žuvies nieks į vandenį nešoks. </h3>
+				</div>
+			</div>
+		</div>
+
+
+		<script>
+			function move(){
+				var redElem = document.getElementById("red");
+				var pos = 0;
+				var kartoti = 200;
+				
+				var patarle = document.querySelector('#patarle');
+				
+				var elem = document.querySelector('#red');
+				var clone = elem.cloneNode(true);
+				clone.classList.add('red');
+				elem.after(clone);
+				clone.style.top = 120 + "px";
+				clone.style.opacity = 0.1;
+				
+				var pos2 = 70;
+				var kartoti2 = 200;
+				var matomumas = 0;
+				var matomumas2 = 0;
+				var DebesiesMatomumas = 0;
+				var PatarlesMatomumas = 0;
+				
+				var cloning = false;
+				
+				var clone2 = elem.cloneNode(true);
+				clone2.classList.add('red');
+				elem.after(clone2);
+				clone2.style.top = 80 + "px";
+				clone2.style.opacity = 0.1;
+				
+				var pos3 = 0;
+				var kartoti3 = 200;
+				
+				var elem2 = document.querySelector('#zeme');
+				var zmogus = elem.cloneNode(true);
+				zmogus.classList.add('red');
+				elem2.after(zmogus);
+				
+				zmogus.style.top = 400 + "px";
+				zmogus.style.width = 100 + "px";
+				zmogus.style.height = 160 + "px";
+				zmogus.style.backgroundImage = "url('sprite1.png')";
+				var jump = false;
+				
+				var Position = 1125;
+				var PositionY = 400;
+				var temp = Position - 250;
+				zmogus.style.left = Position + "px";
+				
+				
+				var debesis = elem.cloneNode(true);
+				debesis.classList.add('red');
+				elem2.after(debesis);
+				
+				debesis.style.top = 0 + "px";
+				debesis.style.width = 300 + "px";
+				debesis.style.height = 150 + "px";
+				debesis.style.backgroundImage = "url('cloud.png')";
+				
+				var debesisPos = 0;
+				
+				var jump = false;
+				
+				var anim = setInterval(animate, 5);
+				function animate(){
+					redElem.style.left = pos + "px";
+					clone.style.left = pos2 + "px";
+					clone2.style.left = pos3 + "px";
+					debesis.style.left = debesisPos + "px";
+					
+					if(debesisPos < 900){
+						DebesiesMatomumas = 0;
+						debesis.style.opacity = 1;
+						debesisPos += 0.01;
+					} else {
+						debesisPos += 1;
+						if (DebesiesMatomumas < 100){
+							DebesiesMatomumas++;
+							debesis.style.opacity = 0.99 - DebesiesMatomumas/100;
+						} else {
+							debesisPos = 0;
+						}
+						
+					}
+					
+					if(pos >= 0 && pos < 1000 && kartoti >= 200){
+						pos++;
+					} else if (pos >= 1000 && kartoti >= 200) {
+						pos++;
+						kartoti = 0;
+					} else if (kartoti >= 0 && kartoti < 200){
+						kartoti++;
+						pos--;
+						cloning = true;
+					}
+					
+					if (cloning == true){
+						matomumas++;
+						if (matomumas < 100){
+							clone.style.opacity = matomumas / 100;
+							clone2.style.opacity = matomumas / 100;
+						}
+						if(pos2 >= 0 && pos2 < 1000 && kartoti2 >= 200){
+							pos2++;
+						} else if (pos2 >= 1000 && kartoti2 >= 200) {
+							pos2++;
+							kartoti2 = 0;
+						} else if (kartoti2 >= 0 && kartoti2 < 200){
+							kartoti2++;
+							pos2--;
+						}
+						
+						if(pos3 >= 0 && pos3 < 1000 && kartoti3 >= 200){
+							pos3++;
+						} else if (pos3 >= 1000 && kartoti3 >= 200) {
+							pos3++;
+							kartoti3 = 0;
+						} else if (kartoti3 >= 0 && kartoti3 < 200){
+							kartoti3++;
+							pos3--;
+							jump = true;
+						}
+						
+						if(jump == true){
+							zmogus.style.left = Position + "px";
+							zmogus.style.top = PositionY + "px";
+							
+							if(Position > temp){
+								zmogus.style.backgroundImage = "url('sprite2.png')";
+								Position--;
+								PositionY--;
+							} else if (Position <= temp && PositionY < 450) {
+								PositionY += 2;
+								zmogus.style.backgroundImage = "url('sprite1.png')";
+							} else {
+							
+								if(PatarlesMatomumas < 70){
+									PatarlesMatomumas++;
+									patarle.style.opacity = PatarlesMatomumas/100;
+								}
+								
+								if (matomumas2 < 20){
+									zmogus.style.opacity = 0.99 - matomumas2/100;
+									matomumas2++;
+								}
+							}
+						}
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>
