@@ -1,0 +1,77 @@
+.model tiny
+.code
+org 100h
+
+start:
+    call pirmas
+
+    mov ah, 4Ch
+    int 21h
+
+pirmas:
+    mov cx, 3  ;nustato tarsi i = 3 kuris nustato kiek eiluciu bus praleista 
+    
+    call eilute
+    call ciklas
+    call eilute
+    
+    mov cx, 4
+    call tarpai
+    
+    mov cx, 2  ;nustato tarsi i = 3 kuris nustato kiek eiluciu bus praleista 
+    call ciklas
+    
+    call eilute
+    
+    mov cx, 7
+    call tarpai
+    
+    mov cx, 1
+    call ciklas
+    
+    call eilute
+    call eilute
+    ret
+    
+eilute:
+    mov ah, 9
+    mov dx, offset eilute1
+    int 21h
+    
+    ret
+    
+ciklas:
+    mov ah, 9
+    mov dx, offset msg
+    int 21h
+    
+    mov ah, 9
+    mov dx, offset tarpas
+    int 21h
+    
+    dec cx        ; mazina nustatyta cx
+    jz exit_loop  ; laukia, kol bus cx 0
+
+    jmp ciklas    ; jei nera 0, sugrizta i cikla
+
+
+tarpai:
+    mov ah, 9
+    mov dx, offset tarpas
+    int 21h
+    
+    dec cx        ; mazina nustatyta cx
+    jz exit_loop  ; laukia, kol bus cx 0
+
+    jmp tarpai    ; jei nera 0, sugrizta i cikla
+
+exit_loop: ;baigia ciklus
+    ret
+
+;issaugomi kintamieji
+msg db 'Julius', '$'
+eilute1 db ' ', 0dh, 0ah, '$'
+tarpas db ' ', '$'
+
+
+end start
